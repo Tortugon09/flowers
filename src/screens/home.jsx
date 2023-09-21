@@ -91,7 +91,7 @@ export default function DedicatoriaForm() {
         (   <div>
             <div className='h2'>
             <img src={logo}></img>
-            <h2>Crear Dedicatoria</h2>
+            <h2>Regalale flores amarillas a tu persona especial</h2>
             </div>
             <form onSubmit={handleSubmit}>
               <div>
