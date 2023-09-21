@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { initializeApp } from "firebase/app";
 import {
   getFirestore,
@@ -90,8 +90,10 @@ export default function VerDedicatoria() {
                     <div className="para">
                         <p className="label">Enviada por:</p>
                         <p className="lol">{dedicatoria.remitente}</p>
+                        <Link to={"/"}>Manda Tu carta</Link>
                     </div>
                 </div>
+
               </div>
               <div className="hijo">
                 <Flower />
