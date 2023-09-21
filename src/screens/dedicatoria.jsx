@@ -99,8 +99,8 @@ export default function VerDedicatoria() {
           <div id="miModal" className="modal">
           <div className="modal-contenido">
               <button onClick={() => reproducirAudio()} id="cerrarModal" className="cerrar">&times;</button>
-              <h2>Te mandan con mucho cariño este regalo.</h2>
-              <p>Disfruta que la persona que te mando esto te quiere mucho, porfavor escucha hasta el final.</p>
+              <h2>Te mandan con mucho cariño este regalo.</h2><br/>
+              <p>Disfruta que la persona que te mandó esto te quiere mucho, porfavor escucha hasta el final.</p>
           </div>
       </div>:
       <></>
