@@ -17,6 +17,8 @@ const firebaseConfig = {
   measurementId: import.meta.env.VITE_MEASUREMENT_ID
 };
 
+
+const app = initializeApp(firebaseConfig);
 const db = getFirestore();
 
 
