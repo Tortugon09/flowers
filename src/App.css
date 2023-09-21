@@ -176,3 +176,61 @@ max-width: 100%;
 .dedicmain{
   position: relative;
 }
+
+/* Estilo general de la página */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo del botón para abrir el modal */
+#abrirModal {
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Estilo del modal */
+.modal {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+/* Estilo del contenido del modal */
+.modal-contenido {
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  color: #000;
+  position: relative;
+  border-radius: 5px;
+  font-size: 0.5rem;
+}
+.modal-contenido h2, p{
+  font-size: 0.8rem;
+}
+
+/* Estilo del botón de cierre (X) */
+.cerrar {
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.cerrar:hover {
+  color: red;
+}

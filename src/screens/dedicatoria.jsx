@@ -31,9 +31,11 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore();
 
+
 export default function VerDedicatoria() {
   const { dedicatoriaId } = useParams();
   const [dedicatoria, setDedicatoria] = useState(null);
+  const [opne, setOpen] = useState(true)
 
   const opts = {
     height: '0', // Establece la altura en 0 para ocultar el reproductor de video
@@ -65,21 +67,17 @@ export default function VerDedicatoria() {
     obtenerDedicatoria();
   }, [dedicatoriaId]);
 
-      // Opciones del reproductor de YouTube
-      const audioRef = useRef(null);
+  const audioRef = useRef(null);
 
-      useEffect(() => {
-        // Cuando el componente se monta, inicia la reproducción una vez que el audio se haya cargado
-        audioRef.current.addEventListener('canplaythrough', () => {
-          audioRef.current.play();
-        });
-      }, []);
-
+  const reproducirAudio = () => {
+    audioRef.current.play();
+    setOpen(false)
+  };
 
   return (
       <div className="dedicmain">
-        <audio ref={audioRef} autoPlay>
-        <source src={mp3} type="audio/mpeg"/>
+        <audio ref={audioRef}>
+        <source src={mp3}  itemID="miAudio" type="audio/mp3"/>
       </audio>
         {dedicatoria ? (
           <>
@@ -99,6 +97,17 @@ export default function VerDedicatoria() {
                 <Flower />
               </div>
             </div>
+            {
+          opne ? 
+          <div id="miModal" className="modal">
+          <div className="modal-contenido">
+              <button onClick={() => reproducirAudio()} id="cerrarModal" className="cerrar">&times;</button>
+              <h2>Te mandan con mucho carillo este regalo.</h2>
+              <p>Disfruta que la persna que te mando esto te quiere mucho porfavor escucha hasta el final.</p>
+          </div>
+      </div>:
+      <></>
+        }
           </>
         ) : (
           <p>Cargando dedicatoria...</p>
