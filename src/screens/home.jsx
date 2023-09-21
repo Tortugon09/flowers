@@ -91,7 +91,7 @@ export default function DedicatoriaForm() {
         (   <div>
             <div className='h2'>
             <img src={logo}></img>
-            <h2>Regalale flores amarillas a tu persona especial</h2>
+            <h2>Regálale flores amarillas a tu persona especial.</h2>
             </div>
             <form onSubmit={handleSubmit}>
               <div>
@@ -100,6 +100,7 @@ export default function DedicatoriaForm() {
                   type="text"
                   id="destinatario"
                   value={destinatario}
+                  autoComplete='off'
                   onChange={(e) => setDestinatario(e.target.value)}
                   required
                 />
@@ -110,6 +111,7 @@ export default function DedicatoriaForm() {
                   type="text"
                   id="remitente"
                   value={remitente}
+                  autoComplete='off'
                   onChange={(e) => setRemitente(e.target.value)}
                   required
                 />
@@ -124,7 +126,7 @@ export default function DedicatoriaForm() {
                 />
               </div>
               <div className='button'>
-                <button type="submit">Enviar Dedicatoria</button>
+                <button type="submit">Generar dedicatoria</button>
               </div>
               <p className='credits'>Hecho por Axel Reyes y Leonardo Toledo</p>
             </form>

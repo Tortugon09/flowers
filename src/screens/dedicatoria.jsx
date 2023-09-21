@@ -85,7 +85,7 @@ export default function VerDedicatoria() {
                     <div className="para">
                         <p className="label">Enviada por:</p>
                         <p className="lol">{dedicatoria.remitente}</p>
-                        <Link to={"/"}>Manda Tu carta</Link>
+                        <Link to={"/"}>Manda tu carta</Link>
                     </div>
                 </div>
 
@@ -100,7 +100,7 @@ export default function VerDedicatoria() {
           <div className="modal-contenido">
               <button onClick={() => reproducirAudio()} id="cerrarModal" className="cerrar">&times;</button>
               <h2>Te mandan con mucho cariño este regalo.</h2><br/>
-              <p>Disfruta que la persona que te mandó esto te quiere mucho, porfavor escucha hasta el final.</p>
+              <p>Disfruta que la persona que te mandó esto te quiere mucho, por favor escucha hasta el final.</p>
           </div>
       </div>:
       <></>
