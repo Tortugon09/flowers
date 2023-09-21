@@ -95,7 +95,7 @@ export default function DedicatoriaForm() {
             </div>
             <form onSubmit={handleSubmit}>
               <div>
-                <label htmlFor="destinatario">Destinatario:</label>
+                <label htmlFor="destinatario">Para:</label>
                 <input
                   type="text"
                   id="destinatario"
@@ -105,7 +105,7 @@ export default function DedicatoriaForm() {
                 />
               </div>
               <div>
-                <label htmlFor="remitente">Remitente:</label>
+                <label htmlFor="remitente">De:</label>
                 <input
                   type="text"
                   id="remitente"
