@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" Component= {Flower}></Route>
+        <Route path="/" Component= {DedicatoriaForm}></Route>
         <Route path="/ver-dedicatoria/:dedicatoriaId" Component={VerDedicatoria} />
       </Routes>
     </Router>
