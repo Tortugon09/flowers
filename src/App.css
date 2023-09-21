@@ -165,7 +165,7 @@ max-width: 100%;
 
 .nieto {
   top: 300px;
-  max-width: 500px;
+  max-width: 400px;
   width: 90%;
   position: relative;
 }
@@ -233,4 +233,9 @@ body {
 
 .cerrar:hover {
   color: red;
+}
+.credits{
+  padding-top: 40px;
+  font-size: 0.5rem;
+  color: rgba(218, 218, 218, 0.60);
 }
