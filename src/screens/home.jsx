@@ -5,18 +5,18 @@ import { getFirestore, addDoc, collection, QuerySnapshot  } from "firebase/fires
 import "../App.css"
 import logo from "../assets/yard.svg"
 
+
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_API_KEY,
-  authDomain:import.meta.env.VITE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_PROJECT_ID,
-  storageBucket:import.meta.env.VITE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_APP_ID,
-  measurementId: import.meta.env.VITE_MEASUREMENT_ID
+  apiKey: "AIzaSyBbivxQl3-YA5k7a9I65fVj2vTC4i3Rhlg",
+  authDomain: "florestux2.firebaseapp.com",
+  projectId: "florestux2",
+  storageBucket: "florestux2.appspot.com",
+  messagingSenderId: "873044039097",
+  appId: "1:873044039097:web:77c05a0d73afdd137f9268",
+  measurementId: "G-93Q5166GDN"
 };
-
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore();
@@ -91,7 +91,7 @@ export default function DedicatoriaForm() {
         (   <div>
             <div className='h2'>
             <img src={logo}></img>
-            <h2>Regálale flores amarillas a tu persona especial</h2>
+            <h2>Regalale flores amarillas a tu persona especial</h2>
             </div>
             <form onSubmit={handleSubmit}>
               <div>
@@ -126,7 +126,7 @@ export default function DedicatoriaForm() {
               <div className='button'>
                 <button type="submit">Enviar Dedicatoria</button>
               </div>
-              <p className='credits'>Hecho por Axel Ramos y Leonardo Toledo</p>
+              <p className='credits'>Hecho por Axel Reyes</p>
             </form>
             </div>
         )
