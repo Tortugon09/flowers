@@ -128,7 +128,7 @@ export default function DedicatoriaForm() {
               <div className='button'>
                 <button type="submit">Generar dedicatoria</button>
               </div>
-              <p className='credits'>Hecho por Axel Reyes y Leonardo Toledo</p>
+              <p className='credits'>Hecho por Axel Reyes</p>
             </form>
             </div>
         )
