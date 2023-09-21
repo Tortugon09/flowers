@@ -3,15 +3,10 @@ import { Link, useParams } from "react-router-dom";
 import { initializeApp } from "firebase/app";
 import {
   getFirestore,
-  addDoc,
-  collection,
-  QuerySnapshot,
   doc,
   getDoc,
 } from "firebase/firestore";
-import logo from "../assets/yard.svg";
 import Flower from "./flowe";
-import YouTube from 'react-youtube';
 import mp3 from "../assets/ytmp3-convert.com_320kbps-floricienta-flores-amarillas-letra.mp3"
 
 
@@ -112,7 +107,7 @@ export default function VerDedicatoria() {
         }
           </>
         ) : (
-          <p>Cargando dedicatoria...</p>
+          <div className="hirameselmejor"><p>Cargando dedicatoria...</p></div>
         )}
       </div>
   );
