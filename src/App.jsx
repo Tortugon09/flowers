@@ -9,7 +9,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" Component= {DedicatoriaForm}></Route>
-        <Route path="/ver-dedicatoria/:dedicatoriaId" component={VerDedicatoria}/>
+        <Route path="/ver-dedicatoria/:dedicatoriaId" Component={VerDedicatoria} />
       </Routes>
     </Router>
   );
