@@ -1,0 +1,13 @@
+{
+    "rewrites": [
+      {
+        "source": "/ver-dedicatoria/([^/]+)",
+        "destination": "/ver-dedicatoria"
+      },
+      {
+        "source": "/(.*)",
+        "destination": "/index.html"
+      }
+    ]
+  }
+  
