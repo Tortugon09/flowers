@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { initializeApp } from "firebase/app";
 import {
@@ -11,6 +11,10 @@ import {
 } from "firebase/firestore";
 import logo from "../assets/yard.svg";
 import Flower from "./flowe";
+import YouTube from 'react-youtube';
+import mp3 from "../assets/ytmp3-convert.com_320kbps-floricienta-flores-amarillas-letra.mp3"
+
+
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -31,6 +35,16 @@ export default function VerDedicatoria() {
   const { dedicatoriaId } = useParams();
   const [dedicatoria, setDedicatoria] = useState(null);
 
+  const opts = {
+    height: '0', // Establece la altura en 0 para ocultar el reproductor de video
+    width: '0',  // Establece el ancho en 0 para ocultar el reproductor de video
+    playerVars: {
+      autoplay: 1, // Reproducir automáticamente
+      controls: 0, // Ocultar los controles del reproductor de video
+      modestbranding: 1, // Ocultar el logotipo de YouTube
+    }}
+    const videoUrl = 'https://www.youtube.com/watch?v=S7gMzYqXIZc';
+    const videoId = videoUrl.split('v=')[1];
   useEffect(() => {
     // Consulta Firestore utilizando el dedicatoriaId obtenido de la URL
     const obtenerDedicatoria = async () => {
@@ -51,8 +65,22 @@ export default function VerDedicatoria() {
     obtenerDedicatoria();
   }, [dedicatoriaId]);
 
+      // Opciones del reproductor de YouTube
+      const audioRef = useRef(null);
+
+      useEffect(() => {
+        // Cuando el componente se monta, inicia la reproducción una vez que el audio se haya cargado
+        audioRef.current.addEventListener('canplaythrough', () => {
+          audioRef.current.play();
+        });
+      }, []);
+
+
   return (
       <div className="dedicmain">
+        <audio ref={audioRef} autoPlay>
+        <source src={mp3} type="audio/mpeg"/>
+      </audio>
         {dedicatoria ? (
           <>
             <div className="padre">

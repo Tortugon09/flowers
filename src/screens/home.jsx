@@ -74,8 +74,7 @@ export default function DedicatoriaForm() {
   };
   
   return (
-    <div className='gradient'>
-        <div className = "main">
+        <div className ="main">
         {realizado ? (
             
             <div className='link'>
@@ -131,7 +130,6 @@ export default function DedicatoriaForm() {
             </div>
         )
         }
-    </div>
     </div>
   );
 }
